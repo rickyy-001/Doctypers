@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOCTYPERS | Web, App and Data Services</title>
+  <meta name="description" content="A small team of developers and a data analyst building websites, apps and data reports for businesses.">
+  <meta name="theme-color" content="#0d1020">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <meta property="og:title" content="DOCTYPERS | Web, App and Data Services">
+  <meta property="og:description" content="A small team of developers and a data analyst building websites, apps and data reports for businesses.">
+  <meta property="og:type" content="website">
+  <!-- ADD LATER: og:image and og:url (full https:// links, once the site is live) -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__thumb"></span></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="#top" aria-label="DOCTYPERS home">
+        <!-- ADD LATER: replace text with <img src="images/logo.svg"> when the logo is ready -->
+        DOCTYPERS
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <picture class="hero__picture">
+        <source type="image/webp" srcset="images/hero-bg-1280.webp 1280w, images/hero-bg-1672.webp 1672w" sizes="100vw">
+        <img class="hero__bg" src="images/hero-bg-1672.jpg" alt="" width="1672" height="940" decoding="async" fetchpriority="high">
+      </picture>
+
+      <div class="hero__content container">
+        <p class="hero__eyebrow">Web, app and data services</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Built to ship.</span></span>
+          <span class="line"><span class="line__inner">Built to last.</span></span>
+        </h1>
+        <p class="hero__sub">We build fast, reliable websites and apps, and turn your data into reports you can act on.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Start a project</a>
+          <a class="btn btn--ghost" href="#work">See our work</a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#services">
+        <span class="hero__scroll-icon" aria-hidden="true"></span>
+        Scroll to continue
+      </a>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <h2 class="section__title" data-reveal>What we do</h2>
+        <ul class="services__list">
+          <li class="service" data-reveal>
+            <h3>Web development</h3>
+            <div>
+              <p>Websites that load fast, look right on any device and make it easy for customers to reach you.</p>
+              <ul class="service__items">
+                <li>Business websites</li>
+                <li>Landing pages</li>
+                <li>E-commerce websites</li>
+                <li>Website maintenance</li>
+              </ul>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3>App development</h3>
+            <div>
+              <p>Custom apps built around how your business works, from first prototype to launch.</p>
+              <ul class="service__items">
+                <li>Android applications</li>
+              </ul>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3>Design</h3>
+            <div>
+              <p>Interfaces that are easy to use, and visuals that make your business look professional.</p>
+              <ul class="service__items">
+                <li>UI/UX design</li>
+                <li>Graphic design</li>
+              </ul>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3>Data analytics</h3>
+            <div>
+              <p>We turn messy spreadsheets and databases into clear numbers you can act on.</p>
+              <ul class="service__items">
+                <li>Data cleaning</li>
+                <li>Excel dashboards</li>
+                <li>SQL reporting</li>
+                <li>Business reports</li>
+                <li>Data visualization</li>
+              </ul>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3>IT consulting</h3>
+            <div>
+              <p>Straight advice on the technology your business needs, before you spend money on it.</p>
+              <ul class="service__items">
+                <li>Technology advice</li>
+                <li>Project planning</li>
+                <li>Choosing the right tools</li>
+              </ul>
+            </div>
+          </li>
+          <!-- ADD LATER: more services. Copy one <li class="service"> block and edit it.
+               Ideas once you have an example to show: Custom digital solutions (business management systems,
+               sales and inventory systems, web-based analytics dashboards) and Automated reporting -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <h2 class="section__title" data-reveal>How a project runs</h2>
+        <ol class="process__list">
+          <li class="step" data-reveal>
+            <span class="step__num">1</span>
+            <h3>Brief</h3>
+            <p>We learn what you need, who it's for and what success looks like.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">2</span>
+            <h3>Design</h3>
+            <p>You see the layout and flow before any code is written.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">3</span>
+            <h3>Build</h3>
+            <p>We develop in small steps and show progress as it happens.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">4</span>
+            <h3>Launch</h3>
+            <p>We test, deploy and hand everything over with clear notes.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="container">
+        <h2 class="section__title" data-reveal>Selected work</h2>
+        <ul class="work__list">
+          <li class="project" data-reveal>
+            <div class="project__media">
+              <!-- ADD LATER: <img src="images/work/project-1.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
+              <span class="project__placeholder">Screenshot coming soon</span>
+            </div>
+            <h3>[PROJECT NAME]</h3>
+            <p>[One line: what it is and who it's for]</p>
+            <p class="project__result">[RESULT, e.g. load time cut by 40%]</p>
+          </li>
+          <li class="project" data-reveal>
+            <div class="project__media">
+              <!-- ADD LATER: <img src="images/work/project-2.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
+              <span class="project__placeholder">Screenshot coming soon</span>
+            </div>
+            <h3>[PROJECT NAME]</h3>
+            <p>[One line: what it is and who it's for]</p>
+            <p class="project__result">[RESULT]</p>
+          </li>
+          <li class="project" data-reveal>
+            <div class="project__media">
+              <!-- ADD LATER: <img src="images/work/project-3.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
+              <span class="project__placeholder">Screenshot coming soon</span>
+            </div>
+            <h3>[PROJECT NAME]</h3>
+            <p>[One line: what it is and who it's for]</p>
+            <p class="project__result">[RESULT]</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section team" id="team">
+      <div class="container">
+        <h2 class="section__title" data-reveal>The team</h2>
+        <p class="team__intro" data-reveal>We let the work do the talking.</p>
+        <ul class="team__list">
+          <li class="member" data-reveal>
+            <div class="member__glyph" data-seed="1" aria-hidden="true"></div>
+            <h3>Satoshi</h3>
+            <p class="member__role">Developer</p>
+            <ul class="member__tags">
+              <li>Websites</li>
+              <li>Android apps</li>
+              <li>UI/UX design</li>
+              <li>Graphic design</li>
+            </ul>
+          </li>
+          <li class="member" data-reveal>
+            <div class="member__glyph" data-seed="2" aria-hidden="true"></div>
+            <h3>Rico</h3>
+            <p class="member__role">Developer</p>
+            <ul class="member__tags">
+              <li>Websites</li>
+              <li>Android apps</li>
+              <li>UI/UX design</li>
+              <li>Graphic design</li>
+            </ul>
+          </li>
+          <li class="member" data-reveal>
+            <div class="member__glyph" data-seed="3" aria-hidden="true"></div>
+            <h3>Zochi</h3>
+            <p class="member__role">Data analyst</p>
+            <ul class="member__tags">
+              <li>Data cleaning</li>
+              <li>Excel</li>
+              <li>SQL</li>
+              <li>Dashboards</li>
+            </ul>
+          </li>
+          <!-- ADD LATER: more members. Copy one <li class="member">, use a new data-seed number and edit the tags -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <h2 class="section__title" data-reveal>Start a project</h2>
+          <p data-reveal>Tell us what you want to build. We'll reply with questions or a plan.</p>
+          <ul class="contact__links" data-reveal></ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate data-reveal>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="project-type">What do you need?</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">Choose one</option>
+              <option>A website</option>
+              <option>A web or mobile app</option>
+              <option>UI/UX or graphic design</option>
+              <option>Data cleaning, dashboards or reports</option>
+              <option>IT consulting</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">About the project</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="btn btn--primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year">2026</span> DOCTYPERS</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

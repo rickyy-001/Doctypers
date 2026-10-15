@@ -1,0 +1,147 @@
+@keyframes line-up {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cue-nudge {
+  0%,
+  100% {
+    transform: translateY(-1px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(2px) rotate(45deg);
+  }
+}
+
+.js .hero__eyebrow {
+  animation: fade-up var(--dur-slow) var(--ease-out) 100ms both;
+}
+
+.js .hero__title .line__inner {
+  animation: line-up var(--dur-slow) var(--ease-out) both;
+}
+
+.js .hero__title .line:nth-child(1) .line__inner {
+  animation-delay: 200ms;
+}
+
+.js .hero__title .line:nth-child(2) .line__inner {
+  animation-delay: 340ms;
+}
+
+.js .hero__sub {
+  animation: fade-up var(--dur-slow) var(--ease-out) 650ms both;
+}
+
+.js .hero__actions {
+  animation: fade-up var(--dur-slow) var(--ease-out) 780ms both;
+}
+
+.js .hero__scroll {
+  animation: fade-in var(--dur-slow) var(--ease-out) 1200ms both;
+}
+
+.js .hero__bg {
+  animation: fade-in 1600ms var(--ease-out) 100ms both;
+}
+
+.hero__scroll-icon::before {
+  animation: cue-nudge 2.4s var(--ease-in-out) infinite;
+}
+
+.scroll-progress__thumb {
+  transition: transform 120ms linear;
+}
+
+.js [data-reveal] {
+  --reveal-dur: 700ms;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity var(--reveal-dur) var(--ease-out) var(--reveal-delay, 0ms),
+    transform var(--reveal-dur) var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.no-motion [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 47.5rem) {
+  .nav.is-open .nav__menu a {
+    animation: fade-up var(--dur-base) var(--ease-out) both;
+  }
+
+  .nav.is-open .nav__menu a:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .nav.is-open .nav__menu a:nth-child(2) {
+    animation-delay: 140ms;
+  }
+
+  .nav.is-open .nav__menu a:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .nav.is-open .nav__menu a:nth-child(4) {
+    animation-delay: 260ms;
+  }
+
+  .nav.is-open .nav__menu a:nth-child(5) {
+    animation-delay: 320ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero__eyebrow,
+  .js .hero__title .line__inner,
+  .js .hero__sub,
+  .js .hero__actions,
+  .js .hero__bg,
+  .js .hero__scroll,
+  .hero__scroll-icon::before,
+  .nav.is-open .nav__menu a {
+    animation: none;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__bg {
+    translate: none;
+  }
+}

@@ -1,0 +1,84 @@
+:root {
+  --canvas: #0d1020;
+  --canvas-deep: #060918;
+  --canvas-raised: #151a2c;
+  --line: #232a40;
+  --line-strong: #3b4560;
+
+  --ink: #ecebe6;
+  --ink-soft: #9a9fa7;
+  --ink-faint: #646a73;
+  --paper: #f3f1ea;
+
+  --accent: #8ec5ff;
+  --accent-dark: #4f8fd1;
+  --on-accent: #060918;
+
+  --success: #7bd3a0;
+  --error: #ff8f87;
+
+  --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+
+  --display-stretch: 62%;
+  --display-weight: 800;
+  --display-leading: 0.9;
+  --display-tracking: -0.01em;
+  --body-leading: 1.6;
+  --measure: 62ch;
+
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.85rem + 0.2vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.45vw, 1.375rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
+  --text-2xl: clamp(2.25rem, 1.5rem + 3.2vw, 4rem);
+  --text-hero: clamp(3.5rem, 1rem + 8vw, 8.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --space-10: 10rem;
+  --section-pad: clamp(5rem, 10vw, 9rem);
+
+  --container: 76rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --nav-height: 4.5rem;
+
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --border: 1px solid var(--line);
+  --border-strong: 1px solid var(--line-strong);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 320ms;
+  --dur-slow: 900ms;
+
+  --z-base: 1;
+  --z-hero-fx: 2;
+  --z-content: 10;
+  --z-progress: 50;
+  --z-nav: 100;
+  --z-overlay: 200;
+
+  --focus-ring: 2px solid var(--accent);
+  --focus-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+  }
+}
