@@ -41,6 +41,7 @@
       </button>
       <nav class="nav__menu" id="nav-menu" aria-label="Main">
         <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#work">Work</a>
         <a href="#team">Team</a>
@@ -141,6 +142,107 @@
       </div>
     </section>
 
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <h2 class="section__title" data-reveal>Pricing</h2>
+        <p class="pricing__intro" data-reveal>Starting prices in US dollars. Every project is quoted once we understand what you need.</p>
+        <ul class="pricing__grid">
+          <li class="price-card" data-reveal>
+            <h3>Web development</h3>
+            <dl class="price-list">
+              <div>
+                <dt>Landing page
+                  <small>One page, mobile-friendly, contact form</small></dt>
+                <dd>$400 – $1,000</dd>
+              </div>
+              <div>
+                <dt>Business website
+                  <small>3 to 5 pages, mobile-friendly</small></dt>
+                <dd>$900 – $2,500</dd>
+              </div>
+              <div>
+                <dt>E-commerce store
+                  <small>Product catalogue, cart and checkout</small></dt>
+                <dd>$1,800 – $6,000</dd>
+              </div>
+              <div>
+                <dt>Website maintenance
+                  <small>Updates, backups and small changes</small></dt>
+                <dd>$60 – $250 /month</dd>
+              </div>
+            </dl>
+          </li>
+          <li class="price-card" data-reveal>
+            <h3>App development</h3>
+            <dl class="price-list">
+              <div>
+                <dt>Android application
+                  <small>Price depends on screens and features</small></dt>
+                <dd>From $2,500</dd>
+              </div>
+            </dl>
+          </li>
+          <li class="price-card" data-reveal>
+            <h3>Design</h3>
+            <dl class="price-list">
+              <div>
+                <dt>UI/UX design
+                  <small>Screens and flows for a website or app</small></dt>
+                <dd>$500 – $2,500</dd>
+              </div>
+              <div>
+                <dt>Logo design</dt>
+                <dd>$200 – $600</dd>
+              </div>
+              <div>
+                <dt>Flyers and social media graphics</dt>
+                <dd>$25 – $100 each</dd>
+              </div>
+            </dl>
+          </li>
+          <li class="price-card" data-reveal>
+            <h3>Data analytics</h3>
+            <dl class="price-list">
+              <div>
+                <dt>Data cleaning
+                  <small>Per dataset</small></dt>
+                <dd>$60 – $300</dd>
+              </div>
+              <div>
+                <dt>Excel dashboard</dt>
+                <dd>$150 – $600</dd>
+              </div>
+              <div>
+                <dt>SQL reporting</dt>
+                <dd>$100 – $400</dd>
+              </div>
+              <div>
+                <dt>Business report
+                  <small>Analysis with written findings</small></dt>
+                <dd>$150 – $500</dd>
+              </div>
+              <div>
+                <dt>Data visualization
+                  <small>Charts for reports and presentations</small></dt>
+                <dd>$80 – $300</dd>
+              </div>
+            </dl>
+          </li>
+          <li class="price-card" data-reveal>
+            <h3>IT consulting</h3>
+            <dl class="price-list">
+              <div>
+                <dt>Technology advice and planning</dt>
+                <dd>$35 – $70 /hour</dd>
+              </div>
+            </dl>
+          </li>
+          <!-- ADD LATER: more price groups. Copy one <li class="price-card"> and edit the heading and rows -->
+        </ul>
+        <p class="pricing__note" data-reveal><strong>Note:</strong> Prices vary with project requirements. <a href="#contact">Contact us</a> for a custom quote, and see our <a href="policy.html">payment and project policy</a> for how deposits work.</p>
+      </div>
+    </section>
+
     <section class="section process" id="process">
       <div class="container">
         <h2 class="section__title" data-reveal>How a project runs</h2>
@@ -175,31 +277,15 @@
         <ul class="work__list">
           <li class="project" data-reveal>
             <div class="project__media">
-              <!-- ADD LATER: <img src="images/work/project-1.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
-              <span class="project__placeholder">Screenshot coming soon</span>
+              <img src="images/work/doctypers-site.jpg" alt="Homepage of the DOCTYPERS website" width="1400" height="875" loading="lazy">
             </div>
-            <h3>[PROJECT NAME]</h3>
-            <p>[One line: what it is and who it's for]</p>
-            <p class="project__result">[RESULT, e.g. load time cut by 40%]</p>
-          </li>
-          <li class="project" data-reveal>
-            <div class="project__media">
-              <!-- ADD LATER: <img src="images/work/project-2.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
-              <span class="project__placeholder">Screenshot coming soon</span>
+            <div class="project__text">
+              <h3>DOCTYPERS website</h3>
+              <p>Our own site: a one-page, animated portfolio that presents our services and sends enquiries to WhatsApp or email.</p>
+              <p class="project__result">Hand-built · Responsive · Animated</p>
             </div>
-            <h3>[PROJECT NAME]</h3>
-            <p>[One line: what it is and who it's for]</p>
-            <p class="project__result">[RESULT]</p>
           </li>
-          <li class="project" data-reveal>
-            <div class="project__media">
-              <!-- ADD LATER: <img src="images/work/project-3.jpg" alt="[PROJECT NAME] screenshot" width="1400" height="900"> -->
-              <span class="project__placeholder">Screenshot coming soon</span>
-            </div>
-            <h3>[PROJECT NAME]</h3>
-            <p>[One line: what it is and who it's for]</p>
-            <p class="project__result">[RESULT]</p>
-          </li>
+          <!-- ADD LATER: more projects. Copy the block above, then change the image (images/work/), name, one-line description and result -->
         </ul>
       </div>
     </section>
@@ -221,7 +307,7 @@
             </ul>
           </li>
           <li class="member" data-reveal>
-            <div class="member__glyph" data-seed="2" aria-hidden="true"></div>
+            <div class="member__glyph" data-seed="899" aria-hidden="true"></div>
             <h3>Rico</h3>
             <p class="member__role">Developer</p>
             <ul class="member__tags">
@@ -242,6 +328,17 @@
               <li>Dashboards</li>
             </ul>
           </li>
+           <li class="member" data-reveal>
+            <div class="member__glyph" data-seed="4" aria-hidden="true"></div>
+            <h3>Djan</h3>
+            <p class="member__role">Developer</p>
+            <ul class="member__tags">
+              <li>Websites</li>
+              <li>Android apps</li>
+              <li>UI/UX design</li>
+              <li>Graphic design</li>
+            </ul>
+          </li>
           <!-- ADD LATER: more members. Copy one <li class="member">, use a new data-seed number and edit the tags -->
         </ul>
       </div>
@@ -253,6 +350,7 @@
           <h2 class="section__title" data-reveal>Start a project</h2>
           <p data-reveal>Tell us what you want to build. We'll reply with questions or a plan.</p>
           <ul class="contact__links" data-reveal></ul>
+          <p class="contact__note" data-reveal>Before we start, have a look at our <a href="policy.html">payment and project policy</a>.</p>
         </div>
 
         <form class="form" id="contact-form" novalidate data-reveal>
@@ -286,6 +384,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>&copy; <span id="year">2026</span> DOCTYPERS</p>
+      <a href="policy.html">Payment and project policy</a>
       <a href="#top">Back to top</a>
     </div>
   </footer>
