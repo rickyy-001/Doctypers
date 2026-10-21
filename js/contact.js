@@ -1,10 +1,10 @@
 (() => {
-  // ADD LATER: fill these in once you have them. Leave a value empty ("") to switch that option off.
-  // whatsapp: full international number, digits only, no + or spaces (example: "233201234567")
+  // Leave a value empty ("") to switch that option off.
+  // whatsapp: a WhatsApp username (with or without @) or a full international number, digits only.
   const CONTACT = {
     teamName: "DOCTYPERS",
-    email: "",
-    whatsapp: "",
+    email: "contact.doctypers@gmail.com",
+    whatsapp: "Doctypers",
   };
 
   const form = document.getElementById("contact-form");
@@ -12,7 +12,11 @@
   const links = document.querySelector(".contact__links");
   if (!form || !status) return;
 
-  const whatsappNumber = CONTACT.whatsapp.replace(/\D/g, "");
+  const raw = CONTACT.whatsapp.trim();
+  const digits = raw.replace(/\D/g, "");
+  const isNumber = /^[+\d\s()-]+$/.test(raw) && digits.length >= 7;
+  const whatsappTarget = isNumber ? digits : raw.replace(/^@/, "");
+  const channels = { whatsapp: Boolean(whatsappTarget), email: Boolean(CONTACT.email) };
 
   if (links) {
     const addLink = (label, href) => {
@@ -23,8 +27,19 @@
       item.appendChild(anchor);
       links.appendChild(item);
     };
-    if (CONTACT.email) addLink(CONTACT.email, `mailto:${CONTACT.email}`);
-    if (whatsappNumber) addLink("Message us on WhatsApp", `https://wa.me/${whatsappNumber}`);
+    if (channels.email) addLink(CONTACT.email, `mailto:${CONTACT.email}`);
+    if (channels.whatsapp) addLink("Message us on WhatsApp", `https://wa.me/${whatsappTarget}`);
+  }
+
+  if (channels.whatsapp || channels.email) {
+    form.querySelectorAll("[type=submit]").forEach((button) => {
+      if (!channels[button.value]) button.remove();
+    });
+    const left = form.querySelectorAll("[type=submit]");
+    if (left.length === 1) {
+      left[0].textContent = "Send message";
+      left[0].className = "btn btn--primary";
+    }
   }
 
   const setStatus = (message, type) => {
@@ -57,23 +72,42 @@
       return;
     }
 
-    if (!whatsappNumber && !CONTACT.email) {
+    if (!channels.whatsapp && !channels.email) {
       setStatus("Contact details are coming soon. Please check back shortly.", "error");
       return;
     }
+
+    const requested = event.submitter && event.submitter.value;
+    const channel = channels[requested] ? requested : channels.whatsapp ? "whatsapp" : "email";
 
     const name = form.elements.name.value.trim();
     const type = form.elements["project-type"].value;
     const message = form.elements.message.value.trim();
     const text = `Hi ${CONTACT.teamName}, my name is ${name}.\nI need: ${type}.\n\n${message}`;
 
-    if (whatsappNumber) {
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
-      setStatus("Opening WhatsApp with your message ready to send.", "success");
+    const copied = navigator.clipboard
+      ? navigator.clipboard.writeText(text).then(() => true, () => false)
+      : Promise.resolve(false);
+
+    if (channel === "whatsapp") {
+      window.open(`https://wa.me/${whatsappTarget}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+      copied.then((ok) =>
+        setStatus(
+          ok
+            ? "Opening WhatsApp. If your message isn't filled in, paste it into the chat. We've copied it for you."
+            : "Opening WhatsApp. If your message isn't filled in, please type it into the chat.",
+          "success"
+        )
+      );
     } else {
       const subject = encodeURIComponent(`New project enquiry: ${type}`);
       window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${encodeURIComponent(text)}`;
-      setStatus("Opening your email app with your message ready to send.", "success");
+      copied.then((ok) =>
+        setStatus(
+          `Opening your email app. If nothing opens, ${ok ? "paste your copied message into an email" : "send your message"} to ${CONTACT.email}.`,
+          "success"
+        )
+      );
     }
 
     form.reset();

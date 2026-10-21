@@ -328,8 +328,8 @@
               <li>Dashboards</li>
             </ul>
           </li>
-           <li class="member" data-reveal>
-            <div class="member__glyph" data-seed="4" aria-hidden="true"></div>
+          <li class="member" data-reveal>
+            <div class="member__glyph" data-seed="10" aria-hidden="true"></div>
             <h3>Djan</h3>
             <p class="member__role">Developer</p>
             <ul class="member__tags">
@@ -361,7 +361,6 @@
           <div class="field">
             <label for="project-type">What do you need?</label>
             <select id="project-type" name="project-type" required>
-              <option value="">Choose one</option>
               <option>A website</option>
               <option>A web or mobile app</option>
               <option>UI/UX or graphic design</option>
@@ -375,7 +374,10 @@
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-          <button class="btn btn--primary" type="submit">Send message</button>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" value="whatsapp">Send on WhatsApp</button>
+            <button class="btn btn--ghost" type="submit" value="email">Send by email</button>
+          </div>
         </form>
       </div>
     </section>
